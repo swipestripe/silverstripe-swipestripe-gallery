@@ -1,0 +1,7 @@
+---
+name: SwipeStripe Gallery
+---
+
+Product:
+  extensions: 
+    - 'Gallery_PageExtension'
