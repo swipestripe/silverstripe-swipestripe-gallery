@@ -1,0 +1,11 @@
+---
+name: Swipestripe Gallery
+---
+
+Product:
+  extensions: 
+    - 'Gallery_PageExtension'
+
+Product_Controller:
+  extensions:
+    - 'Product_GalleryExtension'

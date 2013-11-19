@@ -1,0 +1,423 @@
+/*
+	AnythingSlider v1.8+ LESS Minimalist Square theme
+	By Rob Garrison
+*/
+/*****************************
+SET DEFAULT DIMENSIONS HERE
+*****************************/
+/* change the ID & dimensions to match your slider */
+#slider {
+	width: 100%;
+	height: 300px;
+	list-style: none;
+	/* Prevent FOUC (see FAQ page) and keep things readable if javascript is disabled */
+
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+/* slider borders */
+/* current navigation tab styling - uses same navigation background image */
+/* non-current navigation styling */
+.navigation-tab-styling {
+	width: 10px;
+	height: 10px;
+	margin: 3px;
+	padding: 0;
+}
+.navigation-border {
+	border: #000 1px solid;
+}
+/* start-stop button background color */
+/* start-stop button text */
+/* navigation arrows */
+/* distance the arrow protrudes horizontally outside of the AnythingSlider wrapper */
+/* distance the navigation controls (tabs & start-stop button) protrudes below the wrapper */
+.anythingSlider-fancybox {
+	/*
+	=================================
+	Default state (no keyboard focus)
+	=================================
+	*/
+
+	/* Overall Wrapper */
+
+	margin: 0 auto;
+	padding: 0 30px 0 30px;
+	/* slider window - top & bottom borders, default state */
+
+	/* Navigation buttons + start/stop button, default state */
+
+	/*
+	=================================
+	Active State (has keyboard focus)
+	=================================
+	*/
+
+	/************************
+	NAVIGATION POSITIONING
+	************************/
+
+	/* Navigation Arrows */
+
+	/* back arrow */
+
+	/* forward arrow */
+
+	/* Navigation Links */
+
+	/************************
+	IMAGE POSITIONING
+	************************/
+
+}
+.anythingSlider-fancybox .anythingWindow {
+	border: none;
+	float: left;
+}
+.anythingSlider-fancybox .anythingControls a {
+	background-color: #333333;
+	color: #ffffff;
+	border: #000 1px solid;
+	/* Navigation current button, default state */
+
+	/* start-stop button, stopped, default state */
+
+}
+.anythingSlider-fancybox .anythingControls a.cur,
+.anythingSlider-fancybox .anythingControls a:hover {
+	background-color: #777777;
+	color: #000000;
+}
+.anythingSlider-fancybox .anythingControls a.start-stop {
+	background: #004400;
+	color: #dddddd;
+	/* top shadow */
+
+	-moz-box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.5);
+	/* start-stop button, playing, default state */
+
+	/* start-stop button, default hovered text color (when visible) */
+
+	/* hide nav/start-stop background image shadow on hover - makes the button appear to come forward */
+
+}
+.anythingSlider-fancybox .anythingControls a.start-stop.playing {
+	background-color: #880000;
+}
+.anythingSlider-fancybox .anythingControls a.start-stop:hover,
+.anythingSlider-fancybox .anythingControls a.start-stop.hover,
+.anythingSlider-fancybox .anythingControls a.start-stop .anythingControls ul a:hover {
+	color: #ffffff;
+	/* top shadow */
+
+	-moz-box-shadow: inset 0 0 0 #000000;
+	-webkit-box-shadow: inset 0 0 0 #000000;
+	box-shadow: inset 0 0 0 #000000;
+}
+.anythingSlider-fancybox.activeSlider {
+	/* slider window - top & bottom borders, active state */
+
+	/* Navigation buttons, active state */
+
+	/* start-stop button, active slider hovered text color (when visible) */
+
+}
+.anythingSlider-fancybox.activeSlider .anythingWindow {
+	border-color: #164054;
+}
+.anythingSlider-fancybox.activeSlider .anythingControls a {
+	/* background image = top shadow */
+
+	background-color: #164054;
+	color: #ffffff;
+	/* Navigation current button, active state */
+
+	/* start-stop button, stopped, active state */
+
+}
+.anythingSlider-fancybox.activeSlider .anythingControls a.cur,
+.anythingSlider-fancybox.activeSlider .anythingControls a:hover {
+	background-color: #ffffff;
+	color: #000000;
+}
+.anythingSlider-fancybox.activeSlider .anythingControls a.start-stop {
+	background: #008800;
+	color: #ffffff;
+	/* start-stop button, playing, active state */
+
+}
+.anythingSlider-fancybox.activeSlider .anythingControls a.start-stop.playing {
+	color: #ffffff;
+	background: #ff0000;
+}
+.anythingSlider-fancybox.activeSlider .start-stop:hover,
+.anythingSlider-fancybox.activeSlider .start-stop.hover {
+	color: #ffffff;
+}
+.anythingSlider-fancybox .arrow {
+	top: 50%;
+	position: absolute;
+	display: block;
+}
+.anythingSlider-fancybox .arrow a {
+	display: block;
+	width: 36px;
+	height: 36px;
+	margin: -18px 0 0 0;
+	/* half height of image */
+
+	text-align: center;
+	outline: 0;
+	background: url(../images/fancybox_sprite.png) no-repeat;
+}
+.anythingSlider-fancybox .back {
+	left: 0;
+}
+.anythingSlider-fancybox .back a {
+	background-position: 0 -36px;
+}
+.anythingSlider-fancybox .back a:hover,
+.anythingSlider-fancybox .back a.hover {
+	background-position: 0 -36px;
+}
+.anythingSlider-fancybox .forward {
+	right: 0;
+}
+.anythingSlider-fancybox .forward a {
+	background-position: 0 -72px;
+}
+.anythingSlider-fancybox .forward a:hover,
+.anythingSlider-fancybox .forward a.hover {
+	background-position: 0 -72px;
+}
+.anythingSlider-fancybox .anythingControls {
+	height: 15px;
+	/* limit height, needed for IE9 of all things */
+
+	outline: 0;
+	display: none;
+	float: right;
+	position: absolute;
+	bottom: 5px;
+	right: 20px;
+	margin: 0 54px;
+	/* needed for IE */
+
+	z-index: 100;
+	opacity: 0.90;
+	filter: alpha(opacity=90);
+	/* navigationSize window */
+
+	/* navigationSize nav arrow positioning */
+
+	/* Autoplay Start/Stop button */
+
+}
+.anythingSlider-fancybox .anythingControls ul {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.anythingSlider-fancybox .anythingControls ul li {
+	list-style: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+.anythingSlider-fancybox .anythingControls ul a {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 3px;
+	padding: 0;
+	text-decoration: none;
+	text-align: center;
+	outline: 0;
+}
+.anythingSlider-fancybox .anythingControls span {
+	display: block;
+	visibility: hidden;
+	/* needed for IE8, instead of text-indent: -9999px */
+
+}
+.anythingSlider-fancybox .anythingControls .anythingNavWindow {
+	overflow: hidden;
+	float: left;
+}
+.anythingSlider-fancybox .anythingControls li.prev a span,
+.anythingSlider-fancybox .anythingControls li.next a span {
+	visibility: visible;
+	position: relative;
+	top: -6px;
+	/* bring navigationSize text arrows into view */
+
+}
+.anythingSlider-fancybox .anythingControls .start-stop {
+	margin: 3px;
+	padding: 0;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 3px;
+	padding: 0;
+	text-align: center;
+	text-decoration: none;
+	z-index: 100;
+	outline: 0;
+}
+.anythingSlider-fancybox ul#slider li {
+	text-align: center;
+}
+.anythingSlider-fancybox ul#slider li:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.anythingSlider-fancybox ul#slider img {
+	display: inline-block;
+	vertical-align: middle;
+}
+/***********************
+IE8 AND OLDER STYLING
+***********************/
+.as-oldie .anythingSlider-fancybox {
+	/* Navigation Arrows */
+
+}
+.as-oldie .anythingSlider-fancybox .arrow {
+	top: 45%;
+}
+.as-oldie .anythingSlider-fancybox .arrow a {
+	margin: 0;
+}
+/***********************
+COMMON SLIDER STYLING
+***********************/
+/* Overall Wrapper */
+.anythingSlider {
+	display: block;
+	overflow: visible !important;
+	position: relative;
+	/* anythingSlider viewport window */
+
+	/* anythingSlider base (original element) */
+
+	/* Navigation arrow text; indent moved to span inside "a", for IE7;
+	apparently, a negative text-indent on an "a" link moves the link as well as the text */
+
+	/* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+
+	/* all panels inside the slider; horizontal mode */
+
+	/* vertical mode */
+
+	/* fade mode */
+
+	/***********************
+	RTL STYLING
+	***********************/
+
+	/* slider autoplay right-to-left, reverse order of nav links to look better */
+
+	/* probably not necessary, but added just in case */
+
+}
+.anythingSlider .anythingWindow {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.anythingSlider .anythingBase {
+	background: transparent;
+	list-style: none;
+	position: absolute;
+	overflow: visible !important;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+.anythingSlider .arrow span {
+	display: block;
+	visibility: hidden;
+}
+.anythingSlider .arrow.disabled {
+	display: none;
+}
+.anythingSlider .panel {
+	background: transparent;
+	display: block;
+	overflow: hidden;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+.anythingSlider .vertical .panel {
+	float: none;
+}
+.anythingSlider .fade .panel {
+	float: none;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.anythingSlider .fade .activePage {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	z-index: 2;
+}
+.anythingSlider.rtl {
+	/* move nav link group to left */
+
+	/* move start/stop button - in case you want to switch sides */
+
+}
+.anythingSlider.rtl .anythingWindow {
+	direction: ltr;
+	unicode-bidi: bidi-override;
+}
+.anythingSlider.rtl .anythingControls ul {
+	float: left;
+	/* reverse order of nav links */
+
+}
+.anythingSlider.rtl .anythingControls ul a {
+	float: right;
+}
+.anythingSlider.rtl .start-stop {
+	/* float: right; */
+
+}
+.anythingSlider .anythingWindow,
+.anythingSlider .anythingControls ul a,
+.anythingSlider .arrow a,
+.anythingSlider .start-stop {
+	transition-duration: 0;
+	-o-transition-duration: 0;
+	-moz-transition-duration: 0;
+	-webkit-transition-duration: 0;
+}
+.product .thumbs {
+	float: left;
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+}
+.product .thumbs .slide-thumb {
+	margin: 5px auto;
+	line-height: 0;
+	display: inline-block;
+	outline: none;
+}
+.product .thumbs .slide-thumb img {
+	border: 2px solid #ccc;
+}
+.product .thumbs .current-slide img {
+	border: 2px solid #000;
+}

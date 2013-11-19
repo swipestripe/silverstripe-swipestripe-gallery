@@ -16,7 +16,7 @@
 		"silverstripe/framework": "~3.1",
 		"silverstripe/cms": "~3.1",
 		"swipestripe/swipestripe": "2.1.*",
-		"frankmullenger/gallery": "1.0.*@dev"
+		"frankmullenger/gallery": "1.0.*"
 	},
 	"support":
 	{
