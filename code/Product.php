@@ -8,7 +8,6 @@ class Product_GalleryExtension extends Extension {
 	 * Include javascript and css for displaying product images.
 	 */
 	public function onAfterInit() {
-		
 		Requirements::javascript('swipestripe-gallery/javascript/libs/jquery-1.7.1.min.js');
 		Requirements::javascript('swipestripe-gallery/javascript/libs/jquery.easing.1.2.js');
 		Requirements::javascript('swipestripe-gallery/javascript/libs/jquery.fancybox.js');
@@ -26,6 +25,7 @@ class Product_GalleryExtension extends Extension {
 class Product_Images extends DataObject {
 	
 	static $db = array (
+		'ProductID' => 'Int',
 		'PageID' => 'Int',
 		'ImageID' => 'Int',
 		'Caption' => 'Text',
